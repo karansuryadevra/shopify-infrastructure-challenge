@@ -1,0 +1,30 @@
+<style>
+    table, th, td {
+      border:1px solid black;
+    }
+</style>
+
+<h3><a href="/data">Home</a></h3>
+
+
+<h2>DETAILS</h2>
+
+<table>
+    <tr>
+        <th>Inventory_ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Count</th>
+        <th>Action 1</th>
+        <th>Action 2</th>
+    </tr>
+        <tr>
+            <td>{{inventory.inventory_id}}</td>
+            <td>{{inventory.name}}</td>
+            <td>{{inventory.description}}</td>
+            <td>{{inventory.count}}</td>
+            <td><a href="/data/{{inventory.inventory_id}}/delete"><button class='btn btn-default'>Delete</button></a></td>
+            <td><a href="/data/{{inventory.inventory_id}}/update"><button class='btn btn-default'>Update</button></a></td>
+        </tr>
+</table>
+

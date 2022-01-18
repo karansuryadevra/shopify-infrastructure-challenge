@@ -1,0 +1,35 @@
+<style>
+    table, th, td {
+      border:1px solid black;
+    }
+</style>
+
+<h2>Inventory List</h2>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Count</th>
+        <th>Details</th>
+    </tr>
+        {% for inventory in inventory_list %}
+        <tr>
+            <td><h3>{{inventory.name}}</h3></td>
+            <td><h3>{{inventory.count}}</h3></td>
+            <td><h3><a href='/data/{{inventory.inventory_id}}'>Details</a></td></h3></td>
+            {% endfor %}
+        </tr>
+</table>
+
+<p></p>
+
+<body class="body">
+    <div class="container" align="left">
+         <a href="/data/create"><button class='btn btn-default'>Insert New</button></a>
+    </div>
+ </body>
+<!-- 
+{% for inventory in inventory_list %}
+<h3><a href='/data/{{inventory.inventory_id}}'>{{inventory}}</a></h3><hr>
+{% endfor %} -->
+
